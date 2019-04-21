@@ -1,0 +1,33 @@
+[{
+        "DeviceId": "Madeira_test",
+        "Latitude": 32.7386971,
+        "Longitude": -17.1938114,
+        "SiteName": "Madeira 1",
+
+        "SiteId": "BESS-PT-0000001",
+        "RackTotal": 0,
+        "CellVoltageV": 0.0,
+        "InverterPowerMaxKW": 0.0
+    },
+    {
+        "DeviceId": "SiteControllerOle_0001",
+        "Latitude": 55.8162346,
+        "Longitude": 10.6418362,
+        "SiteName": "Samsø",
+        "SiteId": "BESS-DK-0000003",
+        "RackTotal": 3,
+
+        "CellVoltageV": 4.2,
+        "InverterPowerMaxKW": 50.0
+    },
+    {
+        "DeviceId": "SiteController_0007",
+        "Latitude": 55.73129,
+        "Longitude": 12.2973738,
+        "SiteName": "Lithium Balance Teknikhus",
+        "SiteId": "BESS-DK-0000001",
+        "RackTotal": 2,
+        "CellVoltageV": 4.2,
+        "InverterPowerMaxKW": 50.0
+    }
+]
