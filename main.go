@@ -90,7 +90,7 @@ func telemetryAgg(c *gin.Context) {
 }
 
 func main() {
-	gin.SetMode(gin.DebugMode)
+	gin.SetMode(gin.ReleaseMode)
 	router := gin.Default()
 	router.Use(cors.Default())
 	router.StaticFile("/favicon.ico", "./public/favicon.ico")
