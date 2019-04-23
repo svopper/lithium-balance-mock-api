@@ -1,0 +1,13 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "This is a sample API for Lithium Balance's new remote monitor UI developed by a group of students at ITU.",
+        "title": "Lithium Balance mock API for ITU Developers, spring 2019",
+        "contact": {},
+        "license": {},
+        "version": "1.0"
+    },
+    "host": "{{.Host}}",
+    "basePath": "{{.BasePath}}",
+    "paths": {}
+}

@@ -7,7 +7,11 @@ import (
 
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
+	_ "github.com/svopper/lithium-balance-mockapi/docs"
 	"github.com/svopper/lithium-balance-mockapi/structs"
+
+	ginSwagger "github.com/swaggo/gin-swagger"
+	swaggerFiles "github.com/swaggo/gin-swagger/swaggerFiles"
 )
 
 func devicesAll(c *gin.Context) {
@@ -16,6 +20,7 @@ func devicesAll(c *gin.Context) {
 	var devices []structs.Device
 	err := json.Unmarshal(data, &devices)
 	if err != nil {
+		c.String(500, "Server error")
 		panic(err)
 	}
 
@@ -47,6 +52,7 @@ func getSite(c *gin.Context) {
 	sitesJSON, _ := ioutil.ReadFile("data/sites.json")
 	err := json.Unmarshal(sitesJSON, &sites)
 	if err != nil {
+		c.String(500, "Server error")
 		panic(err)
 	}
 
@@ -69,6 +75,7 @@ func signalsAll(c *gin.Context) {
 	signalsJSON, _ := ioutil.ReadFile("data/signals-all.json")
 	err := json.Unmarshal(signalsJSON, &signals)
 	if err != nil {
+		c.String(500, "Server error")
 		panic(err)
 	}
 
@@ -82,18 +89,21 @@ func telemetryAgg(c *gin.Context) {
 	telemetryJSON, _ := ioutil.ReadFile("data/telemetry-agg.json")
 	err := json.Unmarshal(telemetryJSON, &telemetry)
 	if err != nil {
+		c.String(500, "Server error")
 		panic(err)
 	}
 
 	c.JSON(200, telemetry)
-
 }
 
+// For swagger setup, see https://github.com/swaggo/swag and https://github.com/swaggo/swag/tree/master/example/celler
 func main() {
-	gin.SetMode(gin.ReleaseMode)
+	gin.SetMode(gin.DebugMode)
 	router := gin.Default()
 	router.Use(cors.Default())
 	router.StaticFile("/favicon.ico", "./public/favicon.ico")
+
+	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
 	router.GET("/devices-all", devicesAll)
 	router.GET("/devices/:deviceId/states/now", deviceStateNow)

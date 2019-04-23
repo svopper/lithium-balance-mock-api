@@ -1,0 +1,11 @@
+basePath: '{{.BasePath}}'
+host: '{{.Host}}'
+info:
+  contact: {}
+  description: This is a sample API for Lithium Balance's new remote monitor UI developed
+    by a group of students at ITU.
+  license: {}
+  title: Lithium Balance mock API for ITU Developers, spring 2019
+  version: "1.0"
+paths: {}
+swagger: "2.0"
