@@ -13,6 +13,12 @@ import (
 func devicesAll(c *gin.Context) {
 	data, _ := ioutil.ReadFile("data/devices-all.json")
 
+	var devices []structs.Device
+	err := json.Unmarshal(data, &devices)
+	if err != nil {
+		panic(err)
+	}
+
 	c.String(200, string(data))
 }
 
@@ -56,6 +62,33 @@ func getSite(c *gin.Context) {
 	c.JSON(200, foundSite)
 }
 
+func signalsAll(c *gin.Context) {
+	// deviceID := c.Param("deviceId")
+	var signals structs.SignalsAll
+
+	signalsJSON, _ := ioutil.ReadFile("data/signals-all.json")
+	err := json.Unmarshal(signalsJSON, &signals)
+	if err != nil {
+		panic(err)
+	}
+
+	c.JSON(200, signals)
+}
+
+func telemetryAgg(c *gin.Context) {
+	// deviceID := c.Param("deviceId")
+	var telemetry []structs.TelemetryAgg
+
+	telemetryJSON, _ := ioutil.ReadFile("data/telemetry-agg.json")
+	err := json.Unmarshal(telemetryJSON, &telemetry)
+	if err != nil {
+		panic(err)
+	}
+
+	c.JSON(200, telemetry)
+
+}
+
 func main() {
 	gin.SetMode(gin.DebugMode)
 	router := gin.Default()
@@ -65,6 +98,8 @@ func main() {
 	router.GET("/devices-all", devicesAll)
 	router.GET("/devices/:deviceId/states/now", deviceStateNow)
 	router.GET("/sites/:siteId", getSite)
+	router.GET("/devices/:deviceId/telemetry/aggregated/signals-all", signalsAll)
+	router.GET("/devices/:deviceId/telemetry/aggregated", telemetryAgg)
 
 	router.Run(":1337")
 }

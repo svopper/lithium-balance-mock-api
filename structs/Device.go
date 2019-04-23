@@ -9,5 +9,5 @@ type Device struct {
 	SiteID             string  `json:"SiteId"`
 	RackTotal          int64   `json:"RackTotal"`
 	CellVoltageV       float64 `json:"CellVoltageV"`
-	InverterPowerMaxKW int64   `json:"InverterPowerMaxKW"`
+	InverterPowerMaxKW float64 `json:"InverterPowerMaxKW"`
 }
