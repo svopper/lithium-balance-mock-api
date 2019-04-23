@@ -1,11 +1,13 @@
 package main
 
 import (
+	"encoding/json"
 	"io/ioutil"
 	"math/rand"
 
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
+	"github.com/svopper/lithium-balance-mockapi/structs"
 )
 
 func devicesAll(c *gin.Context) {
@@ -32,30 +34,37 @@ func deviceStateNow(c *gin.Context) {
 	c.String(200, status)
 }
 
-func site(c *gin.Context) {
+func getSite(c *gin.Context) {
 	siteID := c.Param("siteId")
 
-	var data []byte
-
-	switch siteID {
-	case "BESS-DK-0000001":
-		data, _ = ioutil.ReadFile("data/sites/BESS-DK-0000001.json")
-	case "BESS-DK-0000003":
-		data, _ = ioutil.ReadFile("data/sites/BESS-DK-0000003.json")
-	case "BESS-PT-0000001":
-		data, _ = ioutil.ReadFile("data/sites/BESS-PT-0000001.json")
+	var sites []structs.Site
+	sitesJSON, _ := ioutil.ReadFile("data/sites.json")
+	err := json.Unmarshal(sitesJSON, &sites)
+	if err != nil {
+		panic(err)
 	}
 
-	c.String(200, string(data))
+	var foundSite structs.Site
+
+	for _, site := range sites {
+		if site.SiteID == siteID {
+			foundSite = site
+			break
+		}
+	}
+
+	c.JSON(200, foundSite)
 }
 
 func main() {
+	gin.SetMode(gin.DebugMode)
 	router := gin.Default()
 	router.Use(cors.Default())
+	router.StaticFile("/favicon.ico", "./public/favicon.ico")
 
 	router.GET("/devices-all", devicesAll)
 	router.GET("/devices/:deviceId/states/now", deviceStateNow)
-	router.GET("/sites/:siteId", site)
+	router.GET("/sites/:siteId", getSite)
 
-	router.Run()
+	router.Run(":1337")
 }
