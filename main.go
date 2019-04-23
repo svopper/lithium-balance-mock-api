@@ -101,5 +101,5 @@ func main() {
 	router.GET("/devices/:deviceId/telemetry/aggregated/signals-all", signalsAll)
 	router.GET("/devices/:deviceId/telemetry/aggregated", telemetryAgg)
 
-	router.Run(":1337")
+	router.Run()
 }
