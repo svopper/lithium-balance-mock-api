@@ -100,7 +100,11 @@ func telemetryAgg(c *gin.Context) {
 func main() {
 	gin.SetMode(gin.DebugMode)
 	router := gin.Default()
-	router.Use(cors.Default())
+
+	config := cors.DefaultConfig()
+	config.AllowAllOrigins = true
+	router.Use(cors.New(config))
+
 	router.StaticFile("/favicon.ico", "./public/favicon.ico")
 
 	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
