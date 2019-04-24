@@ -136,9 +136,9 @@ func main() {
 	router.GET("/devices/:deviceId/telemetry/aggregated", telemetryAgg)
 
 	config := cors.DefaultConfig()
-	// config.AllowOrigins = []string{"https://iot-lithiumbalancerm-itu.azurewebsites.net"}
+	config.AllowOrigins = []string{"https://iot-lithiumbalancerm-itu.azurewebsites.net"}
 	// config.AllowOrigins = []string{"http://google.com", "http://facebook.com"}
-	config.AllowAllOrigins = true
+	// config.AllowAllOrigins = true
 	config.AllowCredentials = true
 	config.AllowMethods = []string{"GET", "OPTION"}
 	config.AllowHeaders = []string{"Origin", "Content-Length", "Content-Type", "authorization"}
