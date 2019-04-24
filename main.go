@@ -125,7 +125,7 @@ func main() {
 	gin.SetMode(gin.DebugMode)
 	router := gin.Default()
 	config := cors.DefaultConfig()
-	config.AllowOrigins = []string{"https://iot-lithiumbalancerm-itu.azurewebsites.net", "http://localhost:*"}
+	config.AllowOrigins = []string{"https://iot-lithiumbalancerm-itu.azurewebsites.net", "http://localhost:3000"}
 	// config.AllowOrigins = []string{"http://google.com", "http://facebook.com"}
 	// config.AllowAllOrigins = true
 	config.AllowCredentials = true
