@@ -125,11 +125,6 @@ func main() {
 	gin.SetMode(gin.DebugMode)
 	router := gin.Default()
 
-	config := cors.DefaultConfig()
-	// config.AllowOrigins = []string{"https://iot-lithiumbalancerm-itu.azurewebsites.net"}
-	// config.AllowOrigins == []string{"http://google.com", "http://facebook.com"}
-	config.AllowAllOrigins = true
-
 	router.StaticFile("/favicon.ico", "./public/favicon.ico")
 	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
@@ -140,6 +135,13 @@ func main() {
 	router.GET("/devices/:deviceId/telemetry/aggregated/signals-all", signalsAll)
 	router.GET("/devices/:deviceId/telemetry/aggregated", telemetryAgg)
 
+	config := cors.DefaultConfig()
+	// config.AllowOrigins = []string{"https://iot-lithiumbalancerm-itu.azurewebsites.net"}
+	// config.AllowOrigins == []string{"http://google.com", "http://facebook.com"}
+	config.AllowAllOrigins = true
+	config.AllowCredentials = true
+
 	router.Use(cors.New(config))
+
 	router.Run()
 }
