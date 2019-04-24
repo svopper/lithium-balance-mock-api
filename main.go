@@ -3,7 +3,6 @@ package main
 import (
 	"encoding/json"
 	"io/ioutil"
-	"math/rand"
 
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
@@ -28,21 +27,21 @@ func devicesAll(c *gin.Context) {
 }
 
 func deviceStateNow(c *gin.Context) {
-	rand := rand.Intn(4)
-	var status string
+	// rand := rand.Intn(4)
+	// var status string
 
-	switch rand {
-	case 0:
-		status = "Offline"
-	case 1:
-		status = "Running"
-	case 2:
-		status = "Idling"
-	case 3:
-		status = "Error"
-	}
+	// switch rand {
+	// case 0:
+	// 	status = "Offline"
+	// case 1:
+	// 	status = "Running"
+	// case 2:
+	// 	status = "Idling"
+	// case 3:
+	// 	status = "Error"
+	// }
 
-	c.String(200, status)
+	c.String(200, "Offline")
 }
 
 func getSite(c *gin.Context) {
