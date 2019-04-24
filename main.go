@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"io/ioutil"
 	"math/rand"
+	"time"
 
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
@@ -25,6 +26,29 @@ func devicesAll(c *gin.Context) {
 	}
 
 	c.String(200, string(data))
+}
+
+// /devices/${id}/telemetry/raw?signals=BmsSocTrimmed&last=1
+func deviceTelementryBmsSocLast(c *gin.Context) {
+	// signal := c.Query("signals")
+	// last := c.Query("last")
+	randI := rand.Intn(100)
+
+	BmsJSON, _ := ioutil.ReadFile("data/bms-soc-trimmed.json")
+
+	var telemetryData []structs.BmsSocTrimmed
+
+	err := json.Unmarshal(BmsJSON, &telemetryData)
+
+	if err != nil {
+		c.String(500, "Server error")
+		panic(err)
+	}
+
+	telemetryData[0].BmsSocTrimmed = int64(randI + 1)
+	telemetryData[0].UTCTime = time.Now().UTC()
+
+	c.JSON(200, telemetryData)
 }
 
 func deviceStateNow(c *gin.Context) {
@@ -102,15 +126,17 @@ func main() {
 	router := gin.Default()
 
 	config := cors.DefaultConfig()
-	config.AllowAllOrigins = true
+	config.AllowOrigins = []string{"https://iot-lithiumbalancerm-itu.azurewebsites.net"}
+	// config.AllowOrigins == []string{"http://google.com", "http://facebook.com"}
+
 	router.Use(cors.New(config))
 
 	router.StaticFile("/favicon.ico", "./public/favicon.ico")
-
 	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
 	router.GET("/devices-all", devicesAll)
 	router.GET("/devices/:deviceId/states/now", deviceStateNow)
+	router.GET("/devices/:deviceId/telemetry/raw", deviceTelementryBmsSocLast)
 	router.GET("/sites/:siteId", getSite)
 	router.GET("/devices/:deviceId/telemetry/aggregated/signals-all", signalsAll)
 	router.GET("/devices/:deviceId/telemetry/aggregated", telemetryAgg)
