@@ -124,17 +124,6 @@ func telemetryAgg(c *gin.Context) {
 func main() {
 	gin.SetMode(gin.DebugMode)
 	router := gin.Default()
-
-	router.StaticFile("/favicon.ico", "./public/favicon.ico")
-	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
-
-	router.GET("/devices-all", devicesAll)
-	router.GET("/devices/:deviceId/states/now", deviceStateNow)
-	router.GET("/devices/:deviceId/telemetry/raw", deviceTelementryBmsSocLast)
-	router.GET("/sites/:siteId", getSite)
-	router.GET("/devices/:deviceId/telemetry/aggregated/signals-all", signalsAll)
-	router.GET("/devices/:deviceId/telemetry/aggregated", telemetryAgg)
-
 	config := cors.DefaultConfig()
 	config.AllowOrigins = []string{"https://iot-lithiumbalancerm-itu.azurewebsites.net"}
 	// config.AllowOrigins = []string{"http://google.com", "http://facebook.com"}
@@ -144,6 +133,15 @@ func main() {
 	config.AllowHeaders = []string{"Origin", "Content-Length", "Content-Type", "authorization"}
 
 	router.Use(cors.New(config))
+	router.StaticFile("/favicon.ico", "./public/favicon.ico")
+	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
+
+	router.GET("/devices-all", devicesAll)
+	router.GET("/devices/:deviceId/states/now", deviceStateNow)
+	router.GET("/devices/:deviceId/telemetry/raw", deviceTelementryBmsSocLast)
+	router.GET("/sites/:siteId", getSite)
+	router.GET("/devices/:deviceId/telemetry/aggregated/signals-all", signalsAll)
+	router.GET("/devices/:deviceId/telemetry/aggregated", telemetryAgg)
 
 	router.Run()
 }
