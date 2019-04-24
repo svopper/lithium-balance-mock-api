@@ -141,6 +141,7 @@ func main() {
 	config.AllowAllOrigins = true
 	config.AllowCredentials = true
 	config.AllowMethods = []string{"GET", "OPTION"}
+	config.AllowHeaders = []string{"Origin", "Content-Length", "Content-Type", "authorization"}
 
 	router.Use(cors.New(config))
 
