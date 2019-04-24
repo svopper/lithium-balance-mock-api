@@ -41,7 +41,7 @@ func deviceStateNow(c *gin.Context) {
 	// 	status = "Error"
 	// }
 
-	c.String(200, "Running")
+	c.String(200, "Error")
 }
 
 func getSite(c *gin.Context) {
