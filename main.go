@@ -15,6 +15,11 @@ import (
 	swaggerFiles "github.com/swaggo/gin-swagger/swaggerFiles"
 )
 
+func handleError(c *gin.Context, err error) {
+	c.String(500, "Server error")
+	panic(err)
+}
+
 func devicesAll(c *gin.Context) {
 	data, _ := ioutil.ReadFile("data/devices-all.json")
 
@@ -25,7 +30,7 @@ func devicesAll(c *gin.Context) {
 		panic(err)
 	}
 
-	c.String(200, string(data))
+	c.JSON(200, devices)
 }
 
 // /devices/${id}/telemetry/raw?signals=BmsSocTrimmed&last=1
@@ -41,8 +46,7 @@ func deviceTelementryBmsSocLast(c *gin.Context) {
 	err := json.Unmarshal(BmsJSON, &telemetryData)
 
 	if err != nil {
-		c.String(500, "Server error")
-		panic(err)
+		handleError(c, err)
 	}
 
 	telemetryData[0].BmsSocTrimmed = int64(randI + 1)
@@ -76,7 +80,7 @@ func getSite(c *gin.Context) {
 	sitesJSON, _ := ioutil.ReadFile("data/sites.json")
 	err := json.Unmarshal(sitesJSON, &sites)
 	if err != nil {
-		c.String(500, "Server error")
+		c.String(500, "Server error, ")
 		panic(err)
 	}
 
@@ -124,24 +128,24 @@ func telemetryAgg(c *gin.Context) {
 func main() {
 	gin.SetMode(gin.DebugMode)
 	router := gin.Default()
+
 	config := cors.DefaultConfig()
 	config.AllowOrigins = []string{"https://iot-lithiumbalancerm-itu.azurewebsites.net", "http://localhost:3000"}
-	// config.AllowOrigins = []string{"http://google.com", "http://facebook.com"}
-	// config.AllowAllOrigins = true
 	config.AllowCredentials = true
 	config.AllowMethods = []string{"GET", "OPTION"}
 	config.AllowHeaders = []string{"Origin", "Content-Length", "Content-Type", "authorization"}
-
 	router.Use(cors.New(config))
+
 	router.StaticFile("/favicon.ico", "./public/favicon.ico")
 	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
+	// register routes
 	router.GET("/devices-all", devicesAll)
 	router.GET("/devices/:deviceId/states/now", deviceStateNow)
 	router.GET("/devices/:deviceId/telemetry/raw", deviceTelementryBmsSocLast)
-	router.GET("/sites/:siteId", getSite)
 	router.GET("/devices/:deviceId/telemetry/aggregated/signals-all", signalsAll)
 	router.GET("/devices/:deviceId/telemetry/aggregated", telemetryAgg)
+	router.GET("/sites/:siteId", getSite)
 
 	router.Run()
 }
