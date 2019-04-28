@@ -1,15 +1,21 @@
 package main
 
 import (
+	"context"
 	"encoding/json"
+	"fmt"
 	"io/ioutil"
+	"log"
 	"math/rand"
+	"os"
 	"time"
 
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
+	"github.com/svopper/lithium-balance-mockapi/controllers"
 	_ "github.com/svopper/lithium-balance-mockapi/docs"
 	"github.com/svopper/lithium-balance-mockapi/structs"
+	"go.mongodb.org/mongo-driver/mongo"
 
 	ginSwagger "github.com/swaggo/gin-swagger"
 	swaggerFiles "github.com/swaggo/gin-swagger/swaggerFiles"
@@ -124,6 +130,36 @@ func telemetryAgg(c *gin.Context) {
 	c.JSON(200, telemetry)
 }
 
+const connectionString = "mongodb+srv://root:admin@prod-z7uus.mongodb.net/test?retryWrites=true"
+
+type key string
+
+const (
+	hostKey     = key("hostKey")
+	usernameKey = key("usernameKey")
+	passwordKey = key("passwordKey")
+	databaseKey = key("databaseKey")
+)
+
+func configDB(ctx context.Context) (*mongo.Database, error) {
+	client, err := mongo.NewClient(options.Client().ApplyURI(connectionString))
+}
+
+func init() {
+	fmt.Println("initializing mongodb")
+	ctx := context.Background()
+	ctx, cancel := context.WithCancel(ctx)
+	defer cancel()
+	ctx = context.WithValue(ctx, hostKey, os.Getenv("TODO_MONGO_HOST"))
+	ctx = context.WithValue(ctx, usernameKey, os.Getenv("TODO_MONGO_USERNAME"))
+	ctx = context.WithValue(ctx, passwordKey, os.Getenv("TODO_MONGO_PASSWORD"))
+	ctx = context.WithValue(ctx, databaseKey, os.Getenv("TODO_MONGO_DATABASE"))
+	db, err := configDB(ctx)
+	if err != nil {
+		log.Fatalf("todo: database configuration failed: %v", err)
+	}
+}
+
 // For swagger setup, see https://github.com/swaggo/swag and https://github.com/swaggo/swag/tree/master/example/celler
 func main() {
 	gin.SetMode(gin.DebugMode)
@@ -140,7 +176,8 @@ func main() {
 	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
 	// register routes
-	router.GET("/devices-all", devicesAll)
+	// router.GET("/devices-all", devicesAll)
+	router.GET("/devices-all", controllers.DevicesAll)
 	router.GET("/devices/:deviceId/states/now", deviceStateNow)
 	router.GET("/devices/:deviceId/telemetry/raw", deviceTelementryBmsSocLast)
 	router.GET("/devices/:deviceId/telemetry/aggregated/signals-all", signalsAll)
