@@ -5,6 +5,8 @@ import (
 	"io/ioutil"
 	"math/rand"
 	"time"
+	"strconv"
+	"fmt"
 
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
@@ -33,26 +35,57 @@ func devicesAll(c *gin.Context) {
 	c.JSON(200, devices)
 }
 
-// /devices/${id}/telemetry/raw?signals=BmsSocTrimmed&last=1
+// /devices/Madeira_test/telemetry/raw?signals=BmsSocTrimmed&last=1
+// /devices/Madeira_test/telemetry/raw?signals=InverterActivePower&last=1
 func deviceTelementryBmsSocLast(c *gin.Context) {
-	// signal := c.Query("signals")
-	// last := c.Query("last")
-	randI := rand.Intn(100)
-
-	BmsJSON, _ := ioutil.ReadFile("data/bms-soc-trimmed.json")
-
-	var telemetryData []structs.BmsSocTrimmed
-
-	err := json.Unmarshal(BmsJSON, &telemetryData)
-
-	if err != nil {
-		handleError(c, err)
+	signal := c.Query("signals")
+	lastNs := c.Query("last")
+	var lastN int64
+	if len(lastNs) > 0 {
+		lastNparsed, strconvErr := strconv.Atoi(lastNs)
+		lastN = int64(lastNparsed)
+		if strconvErr != nil {
+			errorMessage := fmt.Sprintf("Cant parse last arg - %s", lastNs)
+			c.String(500, errorMessage)
+			return
+		}
+	} else {
+		lastN = 100
 	}
+	minuteMultiplier := 0
+	if signal == "BmsSocTrimmed" {
+		var telemetrySlice []structs.BmsSocTrimmed
 
-	telemetryData[0].BmsSocTrimmed = int64(randI + 1)
-	telemetryData[0].UTCTime = time.Now().UTC()
+		for i := int64(0); i < lastN; i++ {
+			randI := rand.Intn(100)
+			var data structs.BmsSocTrimmed
+			data.UTCTime = time.Now().Add(time.Duration(minuteMultiplier)*time.Minute).UTC()
+			data.BmsSocTrimmed = int64(randI + 1)
 
-	c.JSON(200, telemetryData)
+			telemetrySlice = append(telemetrySlice, data)
+			minuteMultiplier -= 5
+		}
+
+		c.JSON(200, telemetrySlice)
+	} else if signal == "InverterActivePower" {
+		min := -5.1932296753
+		max := 5.1932296753
+		var dataSlice []structs.InverterActivePower
+
+		for i := int64(0); i < lastN; i++ {
+			randF := min + rand.Float64()*(max-min)
+			var data structs.InverterActivePower
+			data.UTCTime = time.Now().Add(time.Duration(minuteMultiplier)*time.Minute).UTC()
+			data.InverterActivePower = randF
+
+			dataSlice = append(dataSlice, data)
+			minuteMultiplier -= 5
+		}
+		
+		c.JSON(200, dataSlice)	
+	} else {
+		c.String(404, "404, missing signal argument")
+	}
 }
 
 func deviceStateNow(c *gin.Context) {
