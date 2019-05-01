@@ -1,0 +1,646 @@
+[
+    {
+      "UtcEndTime": "2019-04-10T10:47:00Z",
+      "BmsAirInletTemperatureMin": 28.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 29.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T10:48:00Z",
+      "BmsAirInletTemperatureMin": 28.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 29.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T10:49:00Z",
+      "BmsAirInletTemperatureMin": 28.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 29.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T10:50:00Z",
+      "BmsAirInletTemperatureMin": 28.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 29.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T10:51:00Z",
+      "BmsAirInletTemperatureMin": 28.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 29.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T10:52:00Z",
+      "BmsAirInletTemperatureMin": 28.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 30.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T10:53:00Z",
+      "BmsAirInletTemperatureMin": 28.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 30.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T10:54:00Z",
+      "BmsAirInletTemperatureMin": 29.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 30.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T10:55:00Z",
+      "BmsAirInletTemperatureMin": 29.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 30.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T10:56:00Z",
+      "BmsAirInletTemperatureMin": 28.0,
+      "BmsAirInletTemperatureMinCount": 5,
+      "BmsAirInletTemperatureMax": 30.0,
+      "BmsAirInletTemperatureMaxCount": 5
+    },
+    {
+      "UtcEndTime": "2019-04-10T10:57:00Z",
+      "BmsAirInletTemperatureMin": 28.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 29.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T10:58:00Z",
+      "BmsAirInletTemperatureMin": 28.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 29.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T10:59:00Z",
+      "BmsAirInletTemperatureMin": 28.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 29.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:00:00Z",
+      "BmsAirInletTemperatureMin": 28.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 29.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:01:00Z",
+      "BmsAirInletTemperatureMin": 28.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 29.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:02:00Z",
+      "BmsAirInletTemperatureMin": 28.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 29.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:03:00Z",
+      "BmsAirInletTemperatureMin": 28.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 29.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:04:00Z",
+      "BmsAirInletTemperatureMin": 28.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 29.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:05:00Z",
+      "BmsAirInletTemperatureMin": 28.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 29.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:06:00Z",
+      "BmsAirInletTemperatureMin": 28.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 29.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:07:00Z",
+      "BmsAirInletTemperatureMin": 28.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 29.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:08:00Z",
+      "BmsAirInletTemperatureMin": 28.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 29.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:09:00Z",
+      "BmsAirInletTemperatureMin": 28.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 29.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:10:00Z",
+      "BmsAirInletTemperatureMin": 28.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 29.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:11:00Z",
+      "BmsAirInletTemperatureMin": 28.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 28.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:12:00Z",
+      "BmsAirInletTemperatureMin": 28.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 28.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:13:00Z",
+      "BmsAirInletTemperatureMin": 28.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 28.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:14:00Z",
+      "BmsAirInletTemperatureMin": 28.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 28.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:15:00Z",
+      "BmsAirInletTemperatureMin": 28.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 28.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:16:00Z",
+      "BmsAirInletTemperatureMin": 28.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 28.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:17:00Z",
+      "BmsAirInletTemperatureMin": 28.0,
+      "BmsAirInletTemperatureMinCount": 5,
+      "BmsAirInletTemperatureMax": 28.0,
+      "BmsAirInletTemperatureMaxCount": 5
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:18:00Z",
+      "BmsAirInletTemperatureMin": 28.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 28.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:19:00Z",
+      "BmsAirInletTemperatureMin": 28.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 28.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:20:00Z",
+      "BmsAirInletTemperatureMin": 28.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 28.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:21:00Z",
+      "BmsAirInletTemperatureMin": 28.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 28.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:22:00Z",
+      "BmsAirInletTemperatureMin": 28.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 28.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:23:00Z",
+      "BmsAirInletTemperatureMin": 27.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 28.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:24:00Z",
+      "BmsAirInletTemperatureMin": 27.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 28.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:25:00Z",
+      "BmsAirInletTemperatureMin": 27.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 28.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:26:00Z",
+      "BmsAirInletTemperatureMin": 27.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 28.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:27:00Z",
+      "BmsAirInletTemperatureMin": 26.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 28.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:28:00Z",
+      "BmsAirInletTemperatureMin": 26.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 27.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:29:00Z",
+      "BmsAirInletTemperatureMin": 25.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 26.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:30:00Z",
+      "BmsAirInletTemperatureMin": 25.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 26.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:31:00Z",
+      "BmsAirInletTemperatureMin": 25.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 26.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:32:00Z",
+      "BmsAirInletTemperatureMin": 25.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 26.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:33:00Z",
+      "BmsAirInletTemperatureMin": 25.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 26.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:34:00Z",
+      "BmsAirInletTemperatureMin": 25.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 26.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:35:00Z",
+      "BmsAirInletTemperatureMin": 25.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 26.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:36:00Z",
+      "BmsAirInletTemperatureMin": 25.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 26.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:37:00Z",
+      "BmsAirInletTemperatureMin": 25.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 26.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:38:00Z",
+      "BmsAirInletTemperatureMin": 26.0,
+      "BmsAirInletTemperatureMinCount": 5,
+      "BmsAirInletTemperatureMax": 26.0,
+      "BmsAirInletTemperatureMaxCount": 5
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:39:00Z",
+      "BmsAirInletTemperatureMin": 25.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 26.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:40:00Z",
+      "BmsAirInletTemperatureMin": 25.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 26.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:41:00Z",
+      "BmsAirInletTemperatureMin": 25.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 26.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:42:00Z",
+      "BmsAirInletTemperatureMin": 24.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 25.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:43:00Z",
+      "BmsAirInletTemperatureMin": 23.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 25.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:44:00Z",
+      "BmsAirInletTemperatureMin": 20.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 25.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:45:00Z",
+      "BmsAirInletTemperatureMin": 18.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 24.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:46:00Z",
+      "BmsAirInletTemperatureMin": 21.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 24.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:47:00Z",
+      "BmsAirInletTemperatureMin": 22.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 24.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:48:00Z",
+      "BmsAirInletTemperatureMin": 24.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 25.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:49:00Z",
+      "BmsAirInletTemperatureMin": 24.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 25.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:50:00Z",
+      "BmsAirInletTemperatureMin": 25.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 25.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:51:00Z",
+      "BmsAirInletTemperatureMin": 25.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 26.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:52:00Z",
+      "BmsAirInletTemperatureMin": 25.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 27.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:53:00Z",
+      "BmsAirInletTemperatureMin": 26.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 28.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:54:00Z",
+      "BmsAirInletTemperatureMin": 27.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 28.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:55:00Z",
+      "BmsAirInletTemperatureMin": 27.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 28.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:56:00Z",
+      "BmsAirInletTemperatureMin": 27.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 28.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:57:00Z",
+      "BmsAirInletTemperatureMin": 27.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 27.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:58:00Z",
+      "BmsAirInletTemperatureMin": 27.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 27.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T11:59:00Z",
+      "BmsAirInletTemperatureMin": 27.0,
+      "BmsAirInletTemperatureMinCount": 5,
+      "BmsAirInletTemperatureMax": 27.0,
+      "BmsAirInletTemperatureMaxCount": 5
+    },
+    {
+      "UtcEndTime": "2019-04-10T12:00:00Z",
+      "BmsAirInletTemperatureMin": 27.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 27.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T12:01:00Z",
+      "BmsAirInletTemperatureMin": 27.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 28.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T12:02:00Z",
+      "BmsAirInletTemperatureMin": 27.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 28.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T12:03:00Z",
+      "BmsAirInletTemperatureMin": 27.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 28.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T12:04:00Z",
+      "BmsAirInletTemperatureMin": 27.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 28.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T12:05:00Z",
+      "BmsAirInletTemperatureMin": 27.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 28.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T12:06:00Z",
+      "BmsAirInletTemperatureMin": 22.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 27.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T12:07:00Z",
+      "BmsAirInletTemperatureMin": 23.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 26.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T12:08:00Z",
+      "BmsAirInletTemperatureMin": 24.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 26.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T12:09:00Z",
+      "BmsAirInletTemperatureMin": 25.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 26.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T12:10:00Z",
+      "BmsAirInletTemperatureMin": 26.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 26.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T12:11:00Z",
+      "BmsAirInletTemperatureMin": 26.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 27.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T12:12:00Z",
+      "BmsAirInletTemperatureMin": 26.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 28.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T12:13:00Z",
+      "BmsAirInletTemperatureMin": 27.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 28.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T12:14:00Z",
+      "BmsAirInletTemperatureMin": 27.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 28.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T12:15:00Z",
+      "BmsAirInletTemperatureMin": 27.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 28.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T12:16:00Z",
+      "BmsAirInletTemperatureMin": 27.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 28.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    },
+    {
+      "UtcEndTime": "2019-04-10T12:17:00Z",
+      "BmsAirInletTemperatureMin": 27.0,
+      "BmsAirInletTemperatureMinCount": 5,
+      "BmsAirInletTemperatureMax": 28.0,
+      "BmsAirInletTemperatureMaxCount": 5
+    },
+    {
+      "UtcEndTime": "2019-04-10T12:18:00Z",
+      "BmsAirInletTemperatureMin": 27.0,
+      "BmsAirInletTemperatureMinCount": 6,
+      "BmsAirInletTemperatureMax": 28.0,
+      "BmsAirInletTemperatureMaxCount": 6
+    }
+   ]

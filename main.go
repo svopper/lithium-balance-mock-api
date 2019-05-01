@@ -2,11 +2,11 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"io/ioutil"
 	"math/rand"
-	"time"
 	"strconv"
-	"fmt"
+	"time"
 
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
@@ -39,6 +39,8 @@ func devicesAll(c *gin.Context) {
 // /devices/Madeira_test/telemetry/raw?signals=InverterActivePower&last=1
 func deviceTelementryBmsSocLast(c *gin.Context) {
 	signal := c.Query("signals")
+	fmt.Println(signal)
+	fmt.Println("signal")
 	lastNs := c.Query("last")
 	var lastN int64
 	if len(lastNs) > 0 {
@@ -59,7 +61,7 @@ func deviceTelementryBmsSocLast(c *gin.Context) {
 		for i := int64(0); i < lastN; i++ {
 			randI := rand.Intn(100)
 			var data structs.BmsSocTrimmed
-			data.UTCTime = time.Now().Add(time.Duration(minuteMultiplier)*time.Minute).UTC()
+			data.UTCTime = time.Now().Add(time.Duration(minuteMultiplier) * time.Minute).UTC()
 			data.BmsSocTrimmed = int64(randI + 1)
 
 			telemetrySlice = append(telemetrySlice, data)
@@ -75,14 +77,14 @@ func deviceTelementryBmsSocLast(c *gin.Context) {
 		for i := int64(0); i < lastN; i++ {
 			randF := min + rand.Float64()*(max-min)
 			var data structs.InverterActivePower
-			data.UTCTime = time.Now().Add(time.Duration(minuteMultiplier)*time.Minute).UTC()
+			data.UTCTime = time.Now().Add(time.Duration(minuteMultiplier) * time.Minute).UTC()
 			data.InverterActivePower = randF
 
 			dataSlice = append(dataSlice, data)
 			minuteMultiplier -= 5
 		}
-		
-		c.JSON(200, dataSlice)	
+
+		c.JSON(200, dataSlice)
 	} else {
 		c.String(404, "404, missing signal argument")
 	}
@@ -156,21 +158,41 @@ func signalsAll(c *gin.Context) {
 	c.JSON(200, signals)
 }
 
+// /devices/Madeira_test/telemetry/aggregated?signals=BmsAirInletTemperatureMinCount&signals=BmsAirInletTemperatureMin&signals=BmsAirInletTemperatureMax&signals=BmsAirInletTemperatureMaxCount&last=10
 func telemetryAgg(c *gin.Context) {
 	// deviceID := c.Param("deviceId")
-	var telemetry []structs.TelemetryAgg
+	signals := c.QueryArray("signals")
+	fmt.Println("SIGNALS:")
+	fmt.Println(signals)
 
-	telemetryJSON, _ := ioutil.ReadFile("data/telemetry-agg.json")
-	err := json.Unmarshal(telemetryJSON, &telemetry)
-	if err != nil {
-		c.String(500, "Server error")
-		panic(err)
+	if len(signals) == 1 {
+		var telemetry []structs.TelemetryAgg
+		telemetryJSON, _ := ioutil.ReadFile("data/telemetry-agg.json")
+		err := json.Unmarshal(telemetryJSON, &telemetry)
+		if err != nil {
+			c.String(500, "Server error")
+			panic(err)
+		}
+
+		c.JSON(200, telemetry)
+	} else if len(signals) == 4 {
+		var telemetry []structs.TelemetryAggTemp
+		telemetryJSON, _ := ioutil.ReadFile("data/temps.json")
+		err := json.Unmarshal(telemetryJSON, &telemetry)
+		if err != nil {
+			c.String(500, "Server error")
+			panic(err)
+		}
+
+		c.JSON(200, telemetry)
+	} else {
+		c.String(404, "can't figure out what you mean pl0x s€nd hlep¡")
 	}
 
-	c.JSON(200, telemetry)
 }
 
 // For swagger setup, see https://github.com/swaggo/swag and https://github.com/swaggo/swag/tree/master/example/celler
+// https://lithium-balance-mockapi.herokuapp.com
 func main() {
 	gin.SetMode(gin.DebugMode)
 	router := gin.Default()
