@@ -1,0 +1,109 @@
+{
+    "data": [
+      {
+        "key": "tags.displayName",
+        "value": {
+          "value": "Madeira 1",
+          "lastUpdated": null
+        }
+      },
+      {
+        "key": "tags.site.name",
+        "value": {
+          "value": "Madeira 1",
+          "lastUpdated": null
+        }
+      },
+      {
+        "key": "tags.site.location.latitude",
+        "value": {
+          "value": 32.7386971,
+          "lastUpdated": null
+        }
+      },
+      {
+        "key": "tags.site.location.longitude",
+        "value": {
+          "value": -17.1938114,
+          "lastUpdated": null
+        }
+      },
+      {
+        "key": "tags.site.id",
+        "value": {
+          "value": "BESS-PT-0000001",
+          "lastUpdated": null
+        }
+      },
+      {
+        "key": "tags.deviceType",
+        "value": {
+          "value": "SiteController",
+          "lastUpdated": null
+        }
+      },
+      {
+        "key": "tags.isMeteredBySiteController.consumption",
+        "value": {
+          "value": false,
+          "lastUpdated": null
+        }
+      },
+      {
+        "key": "tags.isMeteredBySiteController.inverter",
+        "value": {
+          "value": false,
+          "lastUpdated": null
+        }
+      },
+      {
+        "key": "tags.isMeteredBySiteController.grid",
+        "value": {
+          "value": false,
+          "lastUpdated": null
+        }
+      },
+      {
+        "key": "tags.isMeteredBySiteController.heatpump",
+        "value": {
+          "value": false,
+          "lastUpdated": null
+        }
+      },
+      {
+        "key": "tags.isMeteredBySiteController.pv",
+        "value": {
+          "value": false,
+          "lastUpdated": null
+        }
+      },
+      {
+        "key": "tags.bess.rack.number",
+        "value": {
+          "value": 0,
+          "lastUpdated": null
+        }
+      },
+      {
+        "key": "tags.bess.rack.capacityKW",
+        "value": {
+          "value": 0,
+          "lastUpdated": null
+        }
+      },
+      {
+        "key": "tags.bess.cellVoltageV",
+        "value": {
+          "value": 0,
+          "lastUpdated": null
+        }
+      },
+      {
+        "key": "tags.bess.inverterPowerMaxKW",
+        "value": {
+          "value": 0,
+          "lastUpdated": null
+        }
+      }
+    ]
+  }

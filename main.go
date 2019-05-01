@@ -191,6 +191,16 @@ func telemetryAgg(c *gin.Context) {
 
 }
 
+func deviceTwinDesired(c *gin.Context) {
+	twinDesiredJSON, _ := ioutil.ReadFile("data/device-twin-desired.json")
+	c.String(200, string(twinDesiredJSON))
+}
+
+func deviceTwinTag(c *gin.Context) {
+	twinTagJSON, _ := ioutil.ReadFile("data/device-twin-tag.json")
+	c.String(200, string(twinTagJSON))
+}
+
 // For swagger setup, see https://github.com/swaggo/swag and https://github.com/swaggo/swag/tree/master/example/celler
 // https://lithium-balance-mockapi.herokuapp.com
 func main() {
@@ -213,6 +223,9 @@ func main() {
 	router.GET("/devices/:deviceId/telemetry/raw", deviceTelementryBmsSocLast)
 	router.GET("/devices/:deviceId/telemetry/aggregated/signals-all", signalsAll)
 	router.GET("/devices/:deviceId/telemetry/aggregated", telemetryAgg)
+	router.GET("/devices/:deviceId/twin/desired", deviceTwinDesired)
+	router.GET("/devices/:deviceId/twin/tag", deviceTwinTag)
+
 	router.GET("/sites/:siteId", getSite)
 	router.GET("/sites", getSites)
 
